@@ -2,14 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  var person = {
-    name:"eva rahman",
-    job: "singer"
-  }
-  var style ={
-    color:'red',
-    backgroundColor:'grey'
-  }
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -18,19 +11,26 @@ function App() {
           Edit done <code>src/App.js</code> and save to reload.
         </p>
         <h1>my heading</h1>
-        <h3 style={style}>singer:{person.name+" "+person.job}</h3>
-        <p style={{color:'orange',backgroundColor:'cyan'}}>my first react app</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Person></Person>
+        <Person></Person>
+        <Person></Person>
+        <Person></Person>
       </header>
     </div>
   );
+}
+function Person(){
+  const personStyle={
+    border:'5px solid cyan',
+    margin:'5px',
+    padding:'5px'
+  }
+  return (
+  <div style={personStyle}>
+    <h1>name:Sakib</h1>
+    <h3>Best Player of the year</h3>
+  </div>
+  )
 }
 
 export default App;
